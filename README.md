@@ -6,8 +6,6 @@ cohort reconstruction, and sensitivity analyses.
 ## Repository layout
 
 ```text
-scripts/
-└── generate_synthetic_data.py
 notebooks/
 ├── modeling_workflow/
 │   ├── 01_Cohort_Construction.ipynb
@@ -89,28 +87,6 @@ The CLMBR checkpoint is also gated. Request and accept access at
 then authenticate in the GPU app using an approved `HF_TOKEN` or
 `huggingface-cli login`. Package installation alone does not grant model
 access.
-
-## Synthetic smoke test
-
-Generate a fully synthetic artifact set before using controlled data:
-
-```bash
-python scripts/generate_synthetic_data.py --output-dir synthetic_artifacts
-export LUNG_CANCER_DATA_DIR="$(pwd)/synthetic_artifacts"
-export LUNG_CANCER_SYNTHETIC=1
-```
-
-The generator creates a synthetic cohort, five stratified folds, more than 100
-paired PheCode/date features, pre-index MEDS events, CLMBR-like embeddings, and
-prediction files for all final model contracts. It validates the files after
-writing them and refuses to write into a nonempty directory unless that
-directory was previously marked as synthetic.
-
-For a CPU smoke test, skip the controlled-data extraction notebooks 01 and 04,
-then run notebooks 02, 03, 05A, and 06. Notebook 05B can also consume the
-synthetic MEDS fixture, but LoRA training still requires its GPU and model
-dependencies. The generated outcomes and metrics are deliberately artificial
-and must not be interpreted scientifically.
 
 ## Reproducibility notes
 
