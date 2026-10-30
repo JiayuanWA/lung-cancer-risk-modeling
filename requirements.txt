@@ -1,0 +1,16 @@
+jupyterlab
+ipython
+numpy
+pandas
+polars
+scipy
+matplotlib
+scikit-learn
+statsmodels
+xgboost
+shap
+lifelines
+tqdm
+google-cloud-bigquery[bqstorage,pandas]
+pandas-gbq
+pyarrow

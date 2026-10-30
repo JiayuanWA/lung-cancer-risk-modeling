@@ -1,0 +1,10 @@
+# Install into a Workbench GPU app that already provides CUDA-enabled PyTorch.
+# hf-ehr is installed separately with --no-deps; see README.md.
+-r requirements.txt
+huggingface-hub==0.25.2
+transformers==4.45.2
+tokenizers==0.20.1
+peft==0.13.2
+accelerate==1.0.1
+omegaconf==2.3.0
+loguru==0.7.2

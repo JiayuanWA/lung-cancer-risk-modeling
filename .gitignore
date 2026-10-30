@@ -1,0 +1,39 @@
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Credentials and local configuration
+*.json
+!*.ipynb
+*.pem
+*.key
+
+# Data, models, and generated outputs
+data/
+output/
+outputs/
+results/
+figures/
+models/
+checkpoints/
+*.csv
+!Phecode_map12_filtered.csv
+*.tsv
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.bin
+synthetic_artifacts/
