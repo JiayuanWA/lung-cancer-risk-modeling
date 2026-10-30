@@ -1,3 +1,3 @@
 # Workbench/Linux MEDS conversion environment.
--r requirements.txt
+-r base.txt
 meds_etl[cpp]==0.3.8

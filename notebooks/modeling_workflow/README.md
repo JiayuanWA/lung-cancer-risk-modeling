@@ -19,12 +19,3 @@ All learned models use the same saved cross-validation folds. Only out-of-fold p
 Notebook 03 trains the EHR-only and smoking-plus-EHR PheCode models and includes a 12-month diagnostic-blackout sensitivity analysis. It reports AUROC/AUPRC and top 5%, 10%, and 20% sensitivity/PPV from out-of-fold predictions.
 
 Notebook 05A evaluates frozen CLMBR representations. Notebook 05B separately performs task-specific LoRA fine-tuning and saves resumable fold adapters and out-of-fold predictions under the configured controlled data directory.
-
-
-## Synthetic smoke test
-
-Run `scripts/generate_synthetic_data.py`, set `LUNG_CANCER_DATA_DIR` to its
-output directory, and set `LUNG_CANCER_SYNTHETIC=1`. Skip notebooks 01 and 04,
-which are the controlled Workbench extraction steps. The CPU smoke-test order is
-02, 03, 05A, and 06. Notebook 05B is optional and still requires a GPU.
-Synthetic outputs are for contract testing only, not scientific inference.
